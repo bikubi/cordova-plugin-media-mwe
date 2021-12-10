@@ -26,4 +26,23 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
+
+    console.log('Media Plugin', Media);
+
+    document.querySelectorAll('button').forEach(function (button) {
+        button.addEventListener('click', function () {
+            var url = this.dataset.url;
+            console.info('playing url', url);
+            play(url);
+        });
+    });
+}
+
+function play (url) {
+    var media = new Media(url,
+          function () { console.log('Media create success'); },
+          function (err) { console.error('Media create error', err); },
+          function (stat) { console.error('Media status', stat); }
+    );
+    media.play();
 }
