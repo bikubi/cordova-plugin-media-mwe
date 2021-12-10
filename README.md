@@ -1,5 +1,7 @@
 # Minimal Reproduction of the Cordova Media Plugin not playing streams
 
+Created via `cordova create` and minimal changes, following [the guide](https://github.com/apache/cordova-contribute/blob/master/create-reproduction.md).
+
 ## Installation
 
 ```
@@ -10,7 +12,7 @@ npm ci
 
 ```
 cordova platform add ios
-cordova run ios
+cordova run ios # --ide, --device, ymmv
 ```
 
 ## Observe
