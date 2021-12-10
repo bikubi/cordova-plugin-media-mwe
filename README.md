@@ -9,6 +9,7 @@ npm ci
 ## Run
 
 ```
+cordova platform add ios
 cordova run ios
 ```
 
