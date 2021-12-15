@@ -3,8 +3,10 @@
 ## Installation
 
 ```
-npm ci
+npm i
 ```
+
+`npm ci` might repreduce better, but I'm not sure my package-lock.json is portable -- please excuse my inexperience.
 
 ## Run
 
